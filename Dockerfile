@@ -1,6 +1,6 @@
 FROM debian:8
 RUN apt-get -y update
-RUN apt-get install -y curl supervisor git openssl  build-essential libssl-dev wget vim curl
+RUN apt-get install -y curl supervisor git openssl build-essential libssl-dev wget vim curl tree nano less
 RUN mkdir -p /var/log/supervisor
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 WORKDIR /apps/
